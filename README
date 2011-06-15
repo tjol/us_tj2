@@ -1,0 +1,39 @@
+                    /===================================\
+                    |       Keyboard layout             |
+                    |           us_tj2                  |
+                    |           US/German (TJ, v2)      |
+                    \===================================/
+
+how to INSTALL:
+===============
+
+Copy the file ``us_tj2'' to /usr/share/X11/xkb/symbols/
+You can now load the layout with
+   $ setxkbmap us_tj2
+or enable it in /etc/X11/xorg.conf
+
+If you want the layout to appear in listings (eg in the KDE configuration), add
+the following line to the layout section of /usr/share/X11/xkb/rules/xorg.lst:
+    us_tj2          US/German (TJ, v2)
+
+If you want it to appear in GNOME (and gdm, etc), add the following to the
+<layoutList> section of /usr/share/X11/xkb/rules/xorg.xml:
+
+    <layout>
+      <configItem>
+        <name>us_tj2</name>
+        <description>US/German (TJ, v2)</description>
+        <languageList><iso639Id>eng</iso639Id>
+                      <iso639Id>ger</iso639Id>
+                      <iso639Id>spa</iso639Id>
+                      <iso639Id>por</iso639Id>
+                      <iso639Id>epo</iso639Id>
+                      <iso639Id>dan</iso639Id>
+                      <iso639Id>nor</iso639Id>
+                      <iso639Id>swe</iso639Id>
+                      <iso639Id>dut</iso639Id>
+                      <iso639Id>fra</iso639Id></languageList>
+      </configItem>
+      <variantList/>
+    </layout>
+

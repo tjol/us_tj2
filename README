@@ -37,3 +37,6 @@ If you want it to appear in GNOME (and gdm, etc), add the following to the
       <variantList/>
     </layout>
 
+The above methods may not work on modern distributions that use evdev. To enable
+the custom layout in KDE 4, you can also edit ~/.kde/share/config/kxkbrc
+by hand.

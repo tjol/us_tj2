@@ -12,8 +12,14 @@ You can now load the layout with
    $ setxkbmap us_tj2
 or enable it in /etc/X11/xorg.conf
 
-If you want the layout to appear in listings (eg in the KDE configuration), add
-the following line to the layout section of /usr/share/X11/xkb/rules/xorg.lst:
+You can configure KDE 4 to use the layout by changing LayoutList in the file
+~/.kde/share/config/kxkbrc . On Gnome, you can edit the GConf value at
+/desktop/gnome/peripherals/keyboard/kdb/layouts with gconf-editor.
+
+On older systems that do not use evdev to configure the keyboard layout, you
+can add the layout to the xkb listings on your machine. For the layout to
+show up in the layout list presented by KDE, add the following line to the
+layout section of /usr/share/X11/xkb/rules/xorg.lst:
     us_tj2          US/German (TJ, v2)
 
 If you want it to appear in GNOME (and gdm, etc), add the following to the
@@ -37,6 +43,3 @@ If you want it to appear in GNOME (and gdm, etc), add the following to the
       <variantList/>
     </layout>
 
-The above methods may not work on modern distributions that use evdev. To enable
-the custom layout in KDE 4, you can also edit ~/.kde/share/config/kxkbrc
-by hand.
